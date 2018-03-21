@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>IsometricSass</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>IsometricSass</h1>
+        </header>
+
+        <div class="container">
+            <h2 id="context"><a href="#context" title="anchor">Context</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <p class="lead">2D</p>
+                    <div class="isometric">
+                        <p class="lead">2d Isometric</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+</code></pre></blockquote>
+                </div>
+            </div>
+
+            <h2 id="grid"><a href="#grid" title="anchor">Grid</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="grid"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                grid(size, color)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;grid&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.grid
+    +grid($size, mediumorchid)
+    width: $size*5
+    height: $size*5
+</code></pre></blockquote>
+                </div>
+            </div>
+
+            <h2 id="plane"><a href="#plane" title="anchor">Plane</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="plane"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                plane(width, height, color)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+</code></pre></blockquote>
+                </div>
+            </div>
+
+            <h2 id="border"><a href="#border" title="anchor">Border</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="plane-border"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                border(size, color)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    +border(2px, white)
+</code></pre></blockquote>
+                </div>
+            </div>
+
+            <h2 id="edge"><a href="#edge" title="anchor">Edge</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="plane-edge"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                edge(depth, color)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    +edge(2px, darkcyan)
+</code></pre></blockquote>
+                </div>
+            </div>
+            <div class="info">
+                <pre><code>+tile(width, height, depth, color)</code></pre>
+                is equivalent to
+                <pre><code>+plane(width, height, color)
++edge(depth, color)</code></pre>
+            </div>
+            <div class="warning">
+                Don't forget to apply some changes to the <strong>::before</strong> element (if the border-radius is different)
+            </div>
+
+            <h2 id="shadow"><a href="#shadow" title="anchor">Shadow</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="plane-shadow"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                shadow(distance, spacingX, spacingY)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    +shadow($size, $size*.1, $size*.3)
+</code></pre></blockquote>
+                </div>
+            </div>
+            <div class="warning">
+                Don't forget to apply some changes to the <strong>::after</strong> element (if the border-radius is different)
+            </div>
+
+            <h2 id="cube"><a href="#cube" title="anchor">Cube</a></h2>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="cube">
+                            <div></div><div></div><div></div><div></div><div></div><div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                cube(width, height, depth, color)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;cube&quot;&gt;
+            &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.cube
+    +cube($size, $size, $size, darkcyan)
+</code></pre></blockquote>
+                </div>
+            </div>
+            <div class="info">
+                <strong>Each side is a plane.</strong> You can modify the sides as you want (border, border-radius, background, content, etc)
+            </div>
+            <div class="warning">
+                Don't forget the <strong>&lt;div&gt;</strong> elements of each of the <strong>6 sides</strong> of the cube
+            </div>
+            <div class="warning">
+                Don't forget to apply some changes to the <strong>child</strong> elements
+            </div>
+
+            <h2 id="position"><a href="#position" title="anchor">Position</a></h2>
+            <p class="lead">In Progress</p>
+
+            <h2 id="animation"><a href="#animation" title="anchor">Animation</a></h2>
+            <p class="lead">In Progress</p>
+            
+        </div>
+    </body>
+</html>

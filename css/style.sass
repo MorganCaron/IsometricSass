@@ -1,0 +1,104 @@
+@import reboot
+@import grid
+@import ratio
+@import isometric
+
+$size: 5rem
+
+body
+	background-color: #EDEDED
+	font-family: 'Open Sans', sans-serif
+	font-weight: 300
+	color: lighten(black, 20%)
+
+h1
+	font-size: 50px
+	font-weight: 300
+	text-align: center
+
+h2
+    margin-bottom: 1rem
+    border-bottom: 2px solid darkcyan
+    font-size: 40px
+    font-weight: 300
+
+h3
+    margin: 1rem 0
+    font-size: 30px
+    font-weight: 300
+    &::after
+        content: ''
+        display: block
+        width: 100px
+        height: 2px
+        margin-right: 100%
+        border: 50px solid mediumorchid
+        border-top: 0
+        border-bottom: 0
+        border-left-color: darkcyan
+
+p.lead
+	font-size: 20px
+
+a
+	text-decoration: none
+	color: lighten(black, 20%)
+	&:hover
+		color: darkcyan
+
+blockquote
+    margin: 1rem
+    overflow-x: auto
+    user-select: text
+
+.prototype
+    margin: .5rem 0
+    font-size: 20px
+    font-weight: bold
+    user-select: text
+    text-align: center
+
+=alert($color)
+    user-select: text
+    margin: 1rem 0
+    padding: .5rem 1rem
+    border-left: 3px solid darken($color, 10%)
+    border-radius: 3px 0 0 3px
+    background: linear-gradient(to right, lighten($color, 30%) 0%, lighten($color, 30%) 80%, transparent 100%)
+
+.info
+    +alert(cyan)
+
+.warning
+    +alert(orange)
+
+.ratio16-9
+    max-width: 700px
+    margin-left: auto
+    margin-right: auto
+
+.isometric-container
+	padding: 0 1rem
+	background: radial-gradient(ellipse at bottom, darken(white, 20%) 0%, royalblue 95%), linear-gradient(to bottom, royalblue 1%, royalblue 25%, darken(white, 20%) 100%)
+
+.grid
+    +grid($size, mediumorchid)
+    width: $size*5
+    height: $size*5
+
+.plane
+    +plane($size, $size, darkcyan)
+
+.plane-border
+    +plane($size, $size, darkcyan)
+    +border(2px, white)
+
+.plane-edge
+    +tile($size, $size, 2px, darkcyan)
+
+.plane-shadow
+    +plane($size, $size, darkcyan)
+    +shadow($size*.3, 0, 0)
+
+.cube
+    +cube($size, $size, $size, darkcyan)

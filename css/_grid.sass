@@ -1,0 +1,60 @@
+$sm: 576px
+$md: 768px
+$lg: 992px
+$xl: 1200px
+
+=col_width($width)
+	-ms-flex-basis: ($width / 12) * 100%
+	flex-basis: ($width / 12) * 100%
+	max-width: ($width / 12) * 100%
+
+=col_type_width($type)
+	@for $width from 1 through 12
+		.col-#{$type}-#{$width}
+			+col_width($width)
+
+.container, .container-fluid
+	padding-left: 1rem
+	padding-right: 1rem
+
+.container
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+
+.row
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	align-content: flex-start
+	margin-left: -1rem
+	margin-right: -1rem
+
+.col
+	display: inline-flex
+
+.col, [class*="col-"]
+	width: 100%
+	padding-left: 1rem
+	padding-right: 1rem
+
+@for $width from 1 through 12
+	.col-#{$width}, .col-xs-#{$width}
+		+col_width($width)
+
+@media (min-width: $sm)
+	.container
+		max-width: 540px
+	+col_type_width("sm")
+@media (min-width: $md)
+	.container
+		max-width: 720px
+	+col_type_width("md")
+@media (min-width: $lg)
+	.container
+		max-width: 960px
+	+col_type_width("lg")
+@media (min-width: $xl)
+	.container
+		max-width: 1140px
+	+col_type_width("xl")

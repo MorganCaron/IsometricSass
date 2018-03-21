@@ -1,0 +1,149 @@
+*, *::before, *::after
+    box-sizing: border-box
+
+.isometric-container
+    overflow: hidden
+
+.isometric
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 0
+    height: 0
+    overflow: visible
+    transform-style: preserve-3d
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg)
+    *
+        transform-style: preserve-3d
+
+=allSpace
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+=hasPseudoElement($element)
+    &::#{$element}
+        content: ''
+        display: block
+
+=before
+    +hasPseudoElement(before)
+    &::before
+        +allSpace
+
+=after
+    +hasPseudoElement(after)
+    &::after
+        +allSpace
+
+=grid($size, $color)
+    background-image: linear-gradient($color 1%, transparent 1%, transparent 99%, $color 99%), linear-gradient(90deg, $color 1%, transparent 1%, transparent 99%, $color 99%)
+    background-size: $size, $size
+
+=plane($width, $height, $color)
+    width: $width
+    height: $height
+    background: $color
+
+=border($size, $color)
+    border: $size solid $color
+    box-sizing: border-box
+
+=edge($depth, $color)
+    +before
+    &::before
+        background: darken($color, 20%)
+        box-shadow: 0px 0px darken($color, 20%)
+        transform: translateZ(-$depth)
+
+=tile($width, $height, $depth, $color)
+    +plane($width, $height, $color)
+    +edge($depth, $color)
+
+=shadow($distance, $spacingX, $spacingY)
+    +after
+    &::after
+        background: rgba(black, .2 / (1+$distance/10))
+        border-color: rgba(black, .2 / (1+$distance/10))
+        border-radius: inherit
+        transform: translateX($distance*$spacingX) translateY($distance*$spacingY) translateZ(-$distance)
+        box-shadow: 0 0 $distance/10 rgba(black, .2)
+        filter: blur($distance/10)
+
+=cube($width, $height, $depth, $color)
+    width: $width
+    height: $height
+    transform-origin: center
+    > *
+        position: absolute
+        +border(1px, darken($color, 20%))
+        background: $color
+    > *:nth-child(3n+1)
+        width: $width
+        height: $height
+    > *:nth-child(3n+2)
+        width: $width
+        height: $depth
+    > *:nth-child(3n+3)
+        width: $height
+        height: $depth
+    > *:nth-child(1)
+        transform: translateZ($depth)
+    > *:nth-child(2)
+        transform: translateY($height - $depth/2) translateZ($depth/2) rotateX(-90deg)
+    > *:nth-child(3)
+        transform: translateX($width - $height/2) translateY($height/2 - $depth/2) translateZ($depth/2) rotateX(-90deg) rotateY(90deg)
+    > *:nth-child(4)
+        transform: initial
+    > *:nth-child(5)
+        transform: translateY(-$depth/2) translateZ($depth/2) rotateX(-90deg)
+    > *:nth-child(6)
+        transform: translateX(-$height/2) translateY($height/2 - $depth/2) translateZ($depth/2) rotateX(-90deg) rotateY(90deg)
+
+=keyframes($name, $attribute, $from, $to)
+    @keyframes #{$name}
+        from
+            #{$attribute}: $from
+        to
+            #{$attribute}: $to
+
+=animation($name, $attribute, $from, $to, $delay, $duration)
+    +keyframes($name, $attribute, $from, $to)
+    #{$attribute}: $from
+    animation: $name $duration ease-in-out forwards
+    animation-delay: $delay
+
+=animationInfinite($name, $attribute, $from, $to, $easing, $delay, $duration)
+    +keyframes($name, $attribute, $from, $to)
+    #{$attribute}: $from
+    animation: $name $duration $easing infinite
+    animation-delay: $delay
+
+=move($name, $from, $to, $delay, $duration)
+    +animation($name, transform, $from, $to, $delay, $duration)
+
+=moveShadow($name, $from, $to, $decalX, $decalY, $delay, $duration)
+    +shadow($from, $decalX, $decalY)
+    &::after
+        animation: $name $duration ease-in-out forwards
+        animation-delay: $delay
+        border-radius: inherit
+    @keyframes #{$name}
+        from
+            background: rgba(black, .2 / (1+$from/10))
+            border-color: rgba(black, .2 / (1+$from/10))
+            transform: translateX($from*$decalX) translateY($from*$decalY) translateZ(-$from)
+            box-shadow: 0 0 $from/10 rgba(black, .2)
+            filter: blur($from/10)
+        to
+            background: rgba(black, .2 / (1+$to/10))
+            border-color: rgba(black, .2 / (1+$to/10))
+            transform: translateX($to*$decalX) translateY($to*$decalY) translateZ(-$to)
+            box-shadow: 0 0 $to/10 rgba(black, .2)
+            filter: blur($to/10)
+
+=rotate($name, $from, $to, $delay, $duration)
+    transform-origin: center
+    +animationInfinite($name, transform, rotateZ($from), rotateZ($to), linear, $delay, $duration)

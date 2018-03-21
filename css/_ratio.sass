@@ -1,0 +1,23 @@
+=ratio($width, $height)
+    display: block
+    position: relative
+    max-width: 100%
+    &:before
+        content: ''
+        display: block
+        padding-top: ($height / $width) * 100%
+    > *
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.ratio16-9
+    +ratio(16, 9)
+
+.ratio4-3
+    +ratio(4, 3)
+
+.ratio1-1
+    +ratio(1, 1)
