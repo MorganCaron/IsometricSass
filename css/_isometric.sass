@@ -54,6 +54,7 @@
 =edge($depth, $color)
     +before
     &::before
+        border-radius: inherit
         background: darken($color, 20%)
         box-shadow: 0px 0px darken($color, 20%)
         transform: translateZ(-$depth)
@@ -65,9 +66,9 @@
 =shadow($distance, $spacingX, $spacingY)
     +after
     &::after
+        border-radius: inherit
         background: rgba(black, .2 / (1+$distance/10))
         border-color: rgba(black, .2 / (1+$distance/10))
-        border-radius: inherit
         transform: translateX($distance*$spacingX) translateY($distance*$spacingY) translateZ(-$distance)
         box-shadow: 0 0 $distance/10 rgba(black, .2)
         filter: blur($distance/10)
