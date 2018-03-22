@@ -9,6 +9,7 @@
     <body>
         <header>
             <h1>IsometricSass</h1>
+            <p class="lead">Sass library of isometric functions</p>
         </header>
 
         <div class="container">
@@ -258,7 +259,46 @@ $size: 1rem
             </div>
 
             <h2 id="position"><a href="#position" title="anchor">Position</a></h2>
-            <p class="lead">In Progress</p>
+            <div class="ratio16-9">
+                <div class="isometric-container">
+                    <div class="isometric">
+                        <div class="grid"></div>
+                        <div class="plane-position"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="prototype">
+                top: X<br>
+                left: Y<br>
+                transform: translateZ(Z)
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HTML</h3>
+<blockquote><pre><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></blockquote>
+                </div>
+                <div class="col-md-6">
+                    <h3>SASS</h3>
+<blockquote><pre><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    top: $size
+    left: $size*2
+    transform: translateZ($size*.5)
+</code></pre></blockquote>
+                </div>
+            </div>
+            <div class="info">
+                Each object is positioned according to its parent
+            </div>
 
             <h2 id="animation"><a href="#animation" title="anchor">Animation</a></h2>
             <p class="lead">In Progress</p>

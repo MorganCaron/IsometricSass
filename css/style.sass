@@ -11,6 +11,13 @@ body
 	font-weight: 300
 	color: lighten(black, 20%)
 
+header
+	h1
+		margin-bottom: 0
+	.lead
+		margin-top: 0
+		text-align: center
+
 h1
 	font-size: 50px
 	font-weight: 300
@@ -102,3 +109,10 @@ blockquote
 
 .cube
     +cube($size, $size, $size, darkcyan)
+
+.plane-position
+	+plane($size, $size, darkcyan)
+	+shadow($size*.5, 0, 0)
+	top: $size
+	left: $size*2
+	transform: translateZ($size*.5)
