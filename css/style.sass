@@ -98,7 +98,7 @@ blockquote
 
 .plane-border
     +plane($size, $size, darkcyan)
-    +border(2px, white)
+    +border(5px, white)
 
 .plane-edge
     +tile($size, $size, 2px, darkcyan)
@@ -116,3 +116,16 @@ blockquote
 	top: $size
 	left: $size*2
 	transform: translateZ($size*.5)
+
+.plane-animation
+	+tile($size, $size, 2px, darkcyan)
+	+move(planeAnimation, translateZ(0), translateZ($size), 0s, 2s, alternate infinite)
+
+.plane-moveShadow
+	+tile($size, $size, 2px, darkcyan)
+	+move(planeAnimation, translateZ(0), translateZ($size), 0s, 2s, alternate infinite)
+	+moveShadow(planeShadow, 0, $size, .2, .4, 0s, 2s, alternate infinite)
+
+.cube-rotate
+	+cube($size, $size, $size, darkcyan)
+	+rotate(cubeRotate, 0deg, 360deg, 0s, 7s)

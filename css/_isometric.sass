@@ -113,41 +113,37 @@
         to
             #{$attribute}: $to
 
-=animation($name, $attribute, $from, $to, $delay, $duration)
+=animation($name, $attribute, $from, $to, $delay, $duration, $options)
     +keyframes($name, $attribute, $from, $to)
     #{$attribute}: $from
-    animation: $name $duration ease-in-out forwards
+    animation: $name $duration ease-in-out forwards $options
     animation-delay: $delay
 
-=animationInfinite($name, $attribute, $from, $to, $easing, $delay, $duration)
-    +keyframes($name, $attribute, $from, $to)
-    #{$attribute}: $from
-    animation: $name $duration $easing infinite
-    animation-delay: $delay
+=move($name, $from, $to, $delay, $duration, $options)
+    +animation($name, transform, $from, $to, $delay, $duration, $options)
 
-=move($name, $from, $to, $delay, $duration)
-    +animation($name, transform, $from, $to, $delay, $duration)
-
-=moveShadow($name, $from, $to, $decalX, $decalY, $delay, $duration)
-    +shadow($from, $decalX, $decalY)
+=moveShadow($name, $from, $to, $spacingX, $spacingY, $delay, $duration, $options)
+    +shadow($from, $spacingX, $spacingY)
     &::after
-        animation: $name $duration ease-in-out forwards
+        animation: $name $duration ease-in-out forwards $options
         animation-delay: $delay
-        border-radius: inherit
     @keyframes #{$name}
         from
             background: rgba(black, .2 / (1+$from/10))
             border-color: rgba(black, .2 / (1+$from/10))
-            transform: translateX($from*$decalX) translateY($from*$decalY) translateZ(-$from)
+            transform: translateX($from*$spacingX) translateY($from*$spacingY) translateZ(-$from)
             box-shadow: 0 0 $from/10 rgba(black, .2)
             filter: blur($from/10)
         to
             background: rgba(black, .2 / (1+$to/10))
             border-color: rgba(black, .2 / (1+$to/10))
-            transform: translateX($to*$decalX) translateY($to*$decalY) translateZ(-$to)
+            transform: translateX($to*$spacingX) translateY($to*$spacingY) translateZ(-$to)
             box-shadow: 0 0 $to/10 rgba(black, .2)
             filter: blur($to/10)
 
 =rotate($name, $from, $to, $delay, $duration)
     transform-origin: center
-    +animationInfinite($name, transform, rotateZ($from), rotateZ($to), linear, $delay, $duration)
+    +keyframes($name, transform, rotateZ($from), rotateZ($to))
+    transform: rotateZ($from)
+    animation: $name $duration linear forwards infinite
+    animation-delay: $delay
