@@ -1,0 +1,25 @@
+=computer
+	position: absolute
+	top: 0
+	transform: translateX($size*.6) translateY($size*.6) rotateZ(-45deg)
+	.screen-foot
+		+tile($size*.2, $size*.2, 2px, $computer-color0)
+		transform: translateX(-$size*.1) translateY(-$size*.2) translateZ(3px)
+	.screen-pod
+		+cube($size*.1, $size*.05, $size*.2, $computer-color0)
+		transform: translateX($size*.05)
+	.screen
+		+cube($size*.07*16, $size*.05, $size*.07*9, $computer-color0)
+		transform: translateX(-$size*.07*16*.5+$size*.05)
+		> *:nth-child(2)
+			background-color: lighten(black, 20%)
+			border: 3px solid $computer-color0
+	.keyboard
+		+tile($size*.6, $size*.3, 2px, $computer-color0)
+		transform: translateX(-$size*.4) translateY($size*.2) translateZ(3px)
+	.mouse
+		+tile($size*.1, $size*.2, 2px, $computer-color0)
+		transform: translateX($size*.3) translateY($size*.3) translateZ(3px) rotateZ(10deg)
+		border-radius: 1px 1px 50% 50%
+		text-align: center
+		font-size: xx-small

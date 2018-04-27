@@ -1,0 +1,11 @@
+=tower
+	position: absolute
+	top: 0
+	+cube($size*.3, $size*.8, $size*.7, $furniture-color0)
+	> *:first-child
+		border-radius: 0 0 10px 10px
+	> *:nth-child(2)
+		border: 2px solid $furniture-color1
+		border-radius: 10px 10px 0 0
+	> *:nth-child(3), > *:nth-child(6)
+		border-radius: 10px 0 0 0

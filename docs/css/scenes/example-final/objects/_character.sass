@@ -1,0 +1,18 @@
+=character
+    position: absolute
+    top: 0
+    +plane($size*.8, $size*1.2, $character-color)
+    border-radius: $size*.5 $size*.5 0 0
+    transform: translateZ($size) rotateX(-90deg)
+    > .head
+        +plane($size*.7, $size*.7, $character-color)
+        top: -$size*.7
+        border-radius: 50%
+    > .leg
+        +plane($size*.25, $size*.4, $character-color)
+        top: $size*1.2
+        left: $size*.1
+        +animation(rightLeg, height, $size*.4, $size*.25, 0, .5s, alternate infinite)
+        &:last-child
+            left: $size*.45
+            +animation(leftLeg, height, $size*.4, $size*.25, .5s, .5s, alternate infinite)

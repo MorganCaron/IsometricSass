@@ -1,0 +1,79 @@
+body
+	background-color: #EDEDED
+	font-family: 'Open Sans', sans-serif
+	font-weight: 300
+	color: lighten(black, 20%)
+
+header
+	h1
+		margin-bottom: 0
+	.lead
+		margin-top: 0
+		text-align: center
+
+h1
+	font-size: 50px
+	font-weight: 300
+	text-align: center
+
+h2
+    margin-bottom: 1rem
+    border-bottom: 2px solid darkcyan
+    font-size: 40px
+    font-weight: 300
+
+h3
+    margin: 1rem 0
+    font-size: 30px
+    font-weight: 300
+    &::after
+        content: ''
+        display: block
+        width: 100px
+        height: 2px
+        margin-right: 100%
+        border: 50px solid mediumorchid
+        border-top: 0
+        border-bottom: 0
+        border-left-color: darkcyan
+
+.lead
+	font-size: 20px
+
+.text-right
+	text-align: right
+
+a
+	text-decoration: none
+	color: lighten(black, 20%)
+	&:hover
+		color: darkcyan
+
+blockquote
+    margin: 1rem
+    overflow-x: auto
+    user-select: text
+
+.prototype
+    margin: .5rem 0
+    font-size: 20px
+    font-weight: bold
+    user-select: text
+    text-align: center
+
+=alert($color)
+    user-select: text
+    margin: 1rem 0
+    padding: .5rem 1rem
+    border-left: 3px solid darken($color, 10%)
+    border-radius: 3px 0 0 3px
+    background: linear-gradient(to right, lighten($color, 30%) 0%, lighten($color, 30%) 80%, transparent 100%)
+
+.info
+    +alert(cyan)
+
+.warning
+    +alert(orange)
+
+footer
+	margin: 2rem 0 1rem

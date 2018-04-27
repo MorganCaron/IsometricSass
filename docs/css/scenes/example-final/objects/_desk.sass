@@ -1,0 +1,25 @@
+=desk
+	position: absolute
+	top: 0
+	width: $size*2
+	height: $size*3
+	> *
+		transform: translateZ($size)
+		&:nth-child(1)
+			+tile($size*2, $size, 3px, lightgrey)
+			&, &::before
+				border-radius: 20px 10px 10px 0
+			.table-pod
+				&:first-child
+					transform: translateX($size*1.4) translateZ(-$size/2) rotateX(-90deg) rotateY(-90deg)
+				&:nth-child(2)
+					transform: translateX(-$size*.4) translateY($size*.1) translateZ(-$size/2) rotateX(-90deg) rotateY(-90deg)
+				&:nth-child(3)
+					transform: translateX($size*.1) translateY(-$size*.4) translateZ(-$size/2) rotateX(-90deg)
+		&:nth-child(2)
+			+tile($size, $size*2, 3px, lightgrey)
+			top: $size
+			&, &::before
+				border-radius: 0 0 10px 10px
+			.table-pod
+				transform: translateY($size*1.4) translateZ(-$size/2) rotateX(-90deg)

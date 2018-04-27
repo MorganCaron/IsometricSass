@@ -1,0 +1,19 @@
+=workspace
+	width: $size*2
+	height: $size*3
+	> .cabinet
+		top: $size*2
+		> *:nth-child(4)
+			+shadow(0, 0, 1.4)
+	& > .tower
+		left: $size*1.5
+		> *:nth-child(4)
+			+shadow(0, 0, 1.4)
+	& > .chair
+		top: $size*1.5
+		left: $size*1.5
+
+.table-pod
+	width: $size
+	height: $size
+	background: radial-gradient(circle at 120% 80%, transparent 70%, $furniture-color1 70%)

@@ -1,0 +1,72 @@
+#example-final > .isometric-container
+    background: url('../img/background/blueprint-iso.png')
+
+$duration: 1s
+
+$furniture-color0: darken(white, 80%)
+$furniture-color1: darkcyan
+$computer-color0: darken(white, 5%)
+$chair-color: mediumorchid
+$character-color: black
+
+@import objects/room
+@import objects/workspace
+@import objects/desk
+@import objects/cabinet
+@import objects/tower
+@import objects/computer
+@import objects/chair
+@import objects/character
+
+.room
+	+room
+	+move(roomIntro, translateY(-$size*25), initial, 0s, 1.5s, null)
+	top: $size
+	left: $size
+	> .floor
+		padding: $size
+
+.workspace
+	+workspace
+	> .cabinet
+		+move(cabinetIntro, translateX($size*.3) translateZ($size*25) rotateZ(-90deg), translateX($size*.3) rotateZ(-90deg), 0s, 1.5s, null)
+		> *:nth-child(4)
+			+moveShadow(cabinetShadowIntro, $size*25, 0, -.6, 0, 0s, 1.5s, null)
+		@for $i from 1 through 3
+			.tray:nth-child(#{$i}) > .drawer
+				+move(drawer#{$i}Intro, translateY($size*25) translateZ(-$size*.18), translateZ(-$size*.18), .4s + $i*.1s, 1.5s, null)
+	& > .tower
+		+move(towerIntro, translateZ($size*25), initial, .2s, 1.5s, null)
+		> *:nth-child(4)
+			+moveShadow(towerShadowIntro, $size*25, 0, 0, .6, .2s, 1.5s, null)
+
+.desk
+	+desk
+	+move(deskIntro, translateZ($size*25), initial, .5s, 1.5s, null)
+	> *
+		+moveShadow(deskShadowIntro, $size*25, $size, 0, .6, .5s, 1.5s, null)
+
+.cabinet
+	+cabinet
+
+.tower
+	+tower
+
+.computer
+	+computer
+
+.chair
+	+chair
+	+move(chairIntro, translateZ($size*25), initial, .9s, 1.5s, null)
+
+.character
+	+character
+	+move(characterIntro, translateZ($size*25) rotateX(-90deg), translateZ($size) rotateX(-90deg), 1.1s, 1.5s, null)
+	left: $size*3.5
+
+#inception
+    max-width: 75%
+    margin-top: 1rem
+    .cube
+    	+cube($size * .5, $size * .5, $size * .5, rgba($furniture-color1, .7))
+    	+rotate(inceptionCubeRotate, 0deg, 360deg, 0s, 7s)

@@ -1,0 +1,24 @@
+=chair
+    position: absolute
+    top: 0
+    width: $size
+    height: $size
+    > *
+        top: $size*.5
+        left: $size*.5
+    > .foot
+        +tile($size*.45, $size*.1, 3px, $furniture-color0)
+        transform-origin: 0% 50%
+    @for $i from 0 through 4
+        > .foot:nth-child(#{2+$i})
+            transform: translateZ(4px) rotateZ(360deg * $i / 5)
+    > .pod
+        +cube($size*.07, $size*.07, $size*.6, $furniture-color0)
+        > *
+            border-color: $furniture-color0
+        > .seat
+            +tile($size*.7, $size*.7, 3px, $chair-color)
+            top: -$size*.35
+            left: -$size*.35
+            &, &::before
+                border-radius: $size*.2

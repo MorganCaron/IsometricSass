@@ -1,0 +1,11 @@
+=room
+    position: absolute
+    top: 0
+    +cube($size*4, $size*5, $size*3, lighten(#00CAFE, 70%))
+    > .floor
+        +edge(3px, #FEFEFE)
+    > .wall
+        background: darken(lightgrey, 10%)
+    > *:nth-child(-n+3)
+        background: transparent
+        border: 0

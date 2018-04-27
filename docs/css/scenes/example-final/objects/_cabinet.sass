@@ -1,0 +1,20 @@
+=cabinet
+	position: absolute
+	top: 0
+	+cube($size*.6, $size*.8, $size*.8, $furniture-color0)
+	> *:nth-child(2)
+		background: transparent
+		border-style: solid
+		border-color: $furniture-color0
+		border-width: $size*.05 $size*.025 $size*.05 $size*.025
+	.tray
+		+tile($size*.55, $size*.8, 2px, $furniture-color0)
+		@for $i from 0 through 2
+			&:nth-child(#{1+$i})
+				transform: translateZ($size * .30 + $i * $size * .25)
+				.drawer
+					+cube($size*.55, $size*.8, $size*.18, $furniture-color1)
+					+shadow($size * .30 + $i * $size * .25 - 1rem, 0, 0)
+					transform: translateZ(-$size * .23)
+					> *:first-child
+						background-color: transparent
