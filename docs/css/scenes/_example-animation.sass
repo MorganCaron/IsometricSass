@@ -1,4 +1,8 @@
 #example-animation
+    .grid
+        +grid($size, mediumorchid)
+        width: $size*5
+        height: $size*5
     .plane-animation
     	+tile($size, $size, 2px, darkcyan)
     	+move(planeAnimation, translateZ(0), translateZ($size), 0s, 2s, alternate infinite)
