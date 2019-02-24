@@ -10,7 +10,7 @@ script: npm run build
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: pLOf9clBAZXUc/yLUfdY21sxyye9me2vbnBDuvmM1bk09vESFCRkflC5hz/zNr0MSqqCPmUn2NaHt6AI5lbRShIo21wrf7eFtobP+jdkDrRBI1gFpsegPnEM52ocH1vAYcN2hUS+IksbkOOpky6jRjhJeGRstwIctsqBwW//uVug6hrpo/+PRT8Uk7YwzdL3/hRp4498hagr71rRl0oqz0jjn124QnhXZyz2TUbRD028KlbfusxRyWjhjPhVy00FKtLaDa9Q5epWpYRpt/0/cVR0qlp8QoxKuj8uMa2w8/zK+aNcYg1glwncwPA1KbPiQlQsvAI+jMjuSD+6BY/JHeHleXMJDWcU3qt+UjZPOHfQX/QrQduZfD5SWZqAaftVtbztN1XRpPlLh6pEN+CP+1JIUYtpkYch/+jVeZPBV/y7x+VziqnsfnLDO7OOr5tlnopmFR7y8bl7+D8lbzcmMrw0s44Qg/jj6Ys8+6GwtuYrcCS4/LGM8Y8/AEQ+JgdSHaMPIPEjzlpe1VpbE4CVGgW+Ec7g1XLFVQKvI7RRqJY0WkOnm6dCRe76BBYtaKjxtrg6Lvpq7UEmpD6vYh1qe5nVeCH7ZzATJ7LMLi875ozAcxA+ABAyyn1GxajPTr6AJBh3fsZ0I5ZTJYeHtOeFNdniu0hGuAVazBtwRYxgxeY=
+  github-token: $GITHUB_TOKEN
   keep-history: true
   on:
     branch: master
