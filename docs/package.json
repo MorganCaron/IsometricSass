@@ -13,6 +13,7 @@
 	"author": "Morgan Caron",
 	"license": "ISC",
 	"devDependencies": {
+		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"autoprefixer": "latest",
 		"clean-webpack-plugin": "latest",
 		"css-loader": "^1.0.1",

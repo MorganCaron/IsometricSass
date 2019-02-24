@@ -1,5 +1,6 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin')
 
 module.exports = function(env, argv) {
 	const dev = (argv.mode === 'development')
@@ -8,9 +9,7 @@ module.exports = function(env, argv) {
 		{
 			loader: 'css-loader',
 			options: {
-				importLoaders: 1,
-				camelCase: true,
-				minimize: true,
+				importLoaders: 2,
 				sourceMap: true
 			}
 		},
@@ -41,11 +40,11 @@ module.exports = function(env, argv) {
 			style: './src/css/style.sass'
 		},
 		output: {
-			filename: '[name].min.css'
+			filename: '[name].min.js'
 		},
 		watch: dev,
 		resolve: {
-			extensions: ['.sass', '.scss']
+			extensions: ['.js', '.json', '.css', '.sass', '.scss', '.png', '.svg', '.jpg', '.gif']
 		},
 		module: {
 			rules: [
@@ -71,6 +70,15 @@ module.exports = function(env, argv) {
 			new MiniCssExtractPlugin({
 				filename: "[name].min.css",
 				chunkFilename: "[id].min.css"
+			}),
+			new OptimizeCssnanoPlugin({
+				cssnanoOptions: {
+					preset: ['default', {
+						discardComments: {
+							removeAll: true,
+						},
+					}],
+				},
 			})
 		]
 	}
