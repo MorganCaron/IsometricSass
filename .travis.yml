@@ -9,7 +9,7 @@ script: npm run build
 
 before_deploy:
   - cd ../
-  - sed -i '/docs\/dist/d' .gitignore
+  - sed -i '/dist/d' .gitignore
 
 deploy:
   provider: pages
