@@ -1,0 +1,28 @@
+{
+	"name": "docs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/css/style.sass",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "webpack-dev-server --mode development --open",
+		"dev": "webpack --mode development",
+		"prod": "webpack --mode production"
+	},
+	"keywords": [],
+	"author": "Morgan Caron",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "latest",
+		"clean-webpack-plugin": "latest",
+		"css-loader": "^1.0.1",
+		"file-loader": "latest",
+		"mini-css-extract-plugin": "latest",
+		"node-sass": "latest",
+		"postcss-loader": "latest",
+		"sass-loader": "latest",
+		"webpack": "^4.29.3",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "latest"
+	}
+}

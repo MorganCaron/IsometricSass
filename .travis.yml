@@ -1,0 +1,10 @@
+language: node_js
+
+script: npm run prod
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  on:
+    branch: master
