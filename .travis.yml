@@ -8,6 +8,7 @@ before_install: cd docs
 script: npm run build
 
 before_deploy:
+  - cd ../
   - sed -i '/docs\/dist/d' .gitignore
 
 deploy:
