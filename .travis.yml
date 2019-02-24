@@ -1,6 +1,8 @@
 language: node_js
 
-script: npm run prod
+before_install: cd docs
+
+script: npm run build
 
 deploy:
   provider: pages
