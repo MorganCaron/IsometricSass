@@ -7,6 +7,9 @@ before_install: cd docs
 
 script: npm run build
 
+before_deploy:
+  - sed -i '/docs/dist/d' .gitignore
+
 deploy:
   provider: pages
   skip-cleanup: true
