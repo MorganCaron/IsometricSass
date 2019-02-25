@@ -1,7 +1,7 @@
 {
-	"name": "docs",
+	"name": "IsometricSass",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Isomatric Sass Library",
 	"main": "src/css/style.sass",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
