@@ -32,7 +32,12 @@ module.exports = function(env, argv) {
 		}
 	}
 	const fileLoader = {
-		loader: 'file-loader'
+		loader: 'file-loader',
+		options: {
+			name(file) {
+				return 'img/[name].[ext]'
+			}
+		}
 	}
 	return {
 		mode: argv.mode,
