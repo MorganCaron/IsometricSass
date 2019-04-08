@@ -12,23 +12,24 @@
 - Responsive
 - Good code quality
 - Good browser support
+- Good performances
 - Beautiful
 - No JavaScript
 
-## Why
+## Why?
 
 The use of 3D graphic contexts in JavaScript is often to the detriment of the performance and support of some browsers.
 
 IsometricSass is a SASS framework that requires no JavaScript.
 It was created to be able to fully use the CSS 3D transformations to create 3D scenes.
 
-## Who
+## Who?
 
 You may want to use IsometricSass if you want to display some 3D animations to illustrate your site without losing performance.
 
 You probably don't want to use it to display hundreds of 3D elements like in some browser games. It's just not made for this kind of content.
 
-## How
+## How?
 
 Just stick this in your style.sass file:
 ```scss
@@ -47,6 +48,8 @@ Have any questions or concerns? Did I forget an element or selector? Does someth
 
 If you decide to contribute, after downloading a copy of the repository make sure to `npm install` to install dependencies useful for development. Then, you can just run the following to start a server of the demo with live reloading and automatic Sass compiling.
 
-`npm run dev`
+```
+$ npm run dev
+```
 
 Thanks for taking the time to contribute :)
