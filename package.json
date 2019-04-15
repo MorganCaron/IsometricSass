@@ -16,7 +16,7 @@
 		"@intervolga/optimize-cssnano-plugin": "latest",
 		"autoprefixer": "latest",
 		"clean-webpack-plugin": "latest",
-		"css-loader": "^1.0.1",
+		"css-loader": "^2.1.1",
 		"file-loader": "latest",
 		"mini-css-extract-plugin": "latest",
 		"node-sass": "latest",
