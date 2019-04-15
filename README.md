@@ -1,6 +1,6 @@
 # IsometricSass
 
-[![IsometricSass](screenshot.png)](https://morgancaron.github.io/IsometricSass/)
+[![IsometricSass](screenshot.png)](https://morgancaron.github.io/IsometricSass/) [![Greenkeeper badge](https://badges.greenkeeper.io/MorganCaron/IsometricSass.svg)](https://greenkeeper.io/)
 
 *Sass library of isometric functions*
 
