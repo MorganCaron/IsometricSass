@@ -1,0 +1,24 @@
+{
+	"plugins": [
+		[
+			"prismjs",
+			{
+				"languages": [
+					"markup",
+					"css",
+					"scss",
+					"sass",
+					"javascript",
+					"typescript"
+				],
+				"plugins": [
+					"line-numbers",
+					"autolinker",
+					"previewers",
+					"keep-markup"
+				],
+				"css": true
+			}
+		]
+	]
+}

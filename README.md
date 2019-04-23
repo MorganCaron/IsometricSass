@@ -5,7 +5,12 @@
 *Sass library of isometric functions*
 
 ![Travis CI](https://img.shields.io/travis/com/MorganCaron/IsometricSass.svg?style=flat-square)
+[![Greenkeeper badge](https://badges.greenkeeper.io/MorganCaron/IsometricSass.svg?style=flat-square)](https://greenkeeper.io/)
 ![GitHub](https://img.shields.io/github/license/MorganCaron/IsometricSass.svg?style=flat-square)
+
+## Documentation
+
+For full demo & documentation, visit [https://morgancaron.github.io/IsometricSass/](https://morgancaron.github.io/IsometricSass/)
 
 ## Goals
 
@@ -14,6 +19,7 @@
 - Good browser support
 - Good performances
 - Beautiful
+- Easy to use
 - No JavaScript
 
 ## Why?
@@ -31,14 +37,12 @@ You probably don't want to use it to display hundreds of 3D elements like in som
 
 ## How?
 
-Just stick this in your style.sass file:
-```scss
+Just paste this in your style.sass file:
+```sass
 @import isometric
 ```
 
 You can create your own 3D objects by using or extending the SASS classes in the `_isometric.sass` file.
-
-Oh, you want a demo you say? Well, here's your demo: [Demo & Documentation](https://morgancaron.github.io/IsometricSass/)
 
 ## Contributing
 

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>IsometricSass</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link rel="stylesheet" href="dist/style.min.css">
+	</head>
+	<body>
+		<header>
+			<h1>IsometricSass</h1>
+			<p class="lead">
+				Isomatric Sass Library<br>
+				<br>
+				<small>
+                    <a href="https://github.com/MorganCaron/IsometricSass">Source / Download</a><br>
+                    Created by <a href="https://morgancaron.dev/">Morgan Caron</a>
+                </small>
+			</p>
+		</header>
+
+		<div class="container">
+			<h2 id="context"><a href="#context" title="anchor">Context</a></h2>
+			<div class="ratio16-9">
+				<div class="isometric-container">
+					<p class="lead">2D</p>
+					<div class="isometric">
+						<p class="lead">2d Isometric</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+	&lt;div class=&quot;isometric&quot;&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric</code></pre>
+				</div>
+			</div>
+
+			<h2 id="grid"><a href="#grid" title="anchor">Grid</a></h2>
+			<div id="example-grid" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="grid"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+grid($size, $color)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+	&lt;div class=&quot;isometric&quot;&gt;
+		&lt;div class=&quot;grid&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.grid
+	+grid($size, mediumorchid)
+	width: $size*5
+	height: $size*5</code></pre>
+				</div>
+			</div>
+
+			<h2 id="plane"><a href="#plane" title="anchor">Plane</a></h2>
+			<div id="example-plane" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="plane"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+plane($width, $height, $color)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)</code></pre>
+				</div>
+			</div>
+
+			<h2 id="border"><a href="#border" title="anchor">Border</a></h2>
+			<div id="example-border" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="plane-border"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+border($size, $color)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    +border(2px, white)</code></pre>
+				</div>
+			</div>
+
+			<h2 id="edge"><a href="#edge" title="anchor">Edge</a></h2>
+			<div id="example-edge" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="plane-edge"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+edge($depth, $color)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    +edge(2px, darkcyan)</code></pre>
+				</div>
+			</div>
+			<div class="info">
+				<pre class="language-sass"><code>+tile(width, height, depth, color)</code></pre>
+				is equivalent to
+				<pre class="language-sass"><code>+plane(width, height, color)
++edge(depth, color)</code></pre>
+			</div>
+
+			<h2 id="shadow"><a href="#shadow" title="anchor">Shadow</a></h2>
+			<div id="example-shadow" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="plane-shadow"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+shadow($distance, $spacingX, $spacingY)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    +shadow($size, $size*.1, $size*.3)</code></pre>
+				</div>
+			</div>
+
+			<h2 id="cube"><a href="#cube" title="anchor">Cube</a></h2>
+			<div id="example-cube" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="cube">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+cube($width, $height, $depth, $color)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;cube&quot;&gt;
+            &lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.cube
+    +cube($size, $size, $size, darkcyan)</code></pre>
+				</div>
+			</div>
+			<div class="info">
+				<strong>Each side is a plane.</strong> You can modify the sides as you want (border, border-radius, background, content, etc)
+			</div>
+			<div class="warning">
+				Don't forget the <strong>&lt;div&gt;</strong> elements of each of the <strong>6 sides</strong> of the cube
+			</div>
+
+			<h2 id="position"><a href="#position" title="anchor">Position</a></h2>
+			<div id="example-position" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="grid"></div>
+						<div class="plane-position"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				top: $X<br>
+				left: $Y<br>
+				transform: translateZ($Z)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +plane($size, $size, darkcyan)
+    top: $size
+    left: $size*2
+    transform: translateZ($size*.5)</code></pre>
+				</div>
+			</div>
+			<div class="info">
+				Each object is positioned according to its parent
+			</div>
+
+			<h2 id="animation"><a href="#animation" title="anchor">Animation</a></h2>
+			<div id="example-animation" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="grid"></div>
+						<div class="plane-animation"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+animation($name, $attribute, $from, $to, $delay, $duration, $options)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +animation(planeAnimation, transform, translateZ(0), translateZ($size), 0s, 2s, alternate infinite)</code></pre>
+				</div>
+			</div>
+			<div class="info">
+				<pre class="language-sass"><code>+move($name, $from, $to, $delay, $duration, $options)</code></pre>
+				is equivalent to
+				<pre class="language-sass"><code>+animation($name, transform, $from, $to, $delay, $duration, $options)</code></pre>
+			</div>
+			<div class="warning">
+				There can only be one animation per element at a time
+			</div>
+
+			<h2 id="moveshadow"><a href="#moveshadow" title="anchor">Move Shadow</a></h2>
+			<div id="example-moveShadow" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="grid"></div>
+						<div class="plane-moveShadow"></div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+moveShadow($name, $from, $to, $spacingX, $spacingY, $delay, $duration, $options)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +moveShadow(planeShadow, 0, $size, .2, .4, 0s, 2s, alternate infinite)</code></pre>
+				</div>
+			</div>
+
+			<h2 id="rotate"><a href="#rotate" title="anchor">Rotate</a></h2>
+			<div id="example-rotate" class="ratio16-9">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="grid"></div>
+						<div class="cube-rotate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				+rotate($name, $from, $to, $delay, $duration)
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<h3>HTML</h3>
+					<pre class="language-html"><code>&lt;div class=&quot;isometric-container&quot;&gt;
+    &lt;div class=&quot;isometric&quot;&gt;
+        &lt;div class=&quot;plane&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+				<div class="col-md-6">
+					<h3>SASS</h3>
+					<pre class="language-sass"><code>@import isometric
+
+$size: 1rem
+
+.plane
+    +rotate(planeRotate, 0deg, 360deg, 0s, 7s)</code></pre>
+				</div>
+			</div>
+
+			<h2 id="final"><a href="#final" title="anchor">Final Example</a></h2>
+			<div id="example-final" class="ratio1-1">
+				<div class="isometric-container">
+					<div class="isometric">
+						<div class="room">
+							<div class="ceil"></div>
+							<div class="wall"></div>
+							<div class="wall"></div>
+							<div class="floor">
+								<div class="workspace">
+									<div class="cabinet">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div>
+											<div class="tray">
+												<div class="drawer">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</div>
+											<div class="tray">
+												<div class="drawer">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</div>
+											<div class="tray">
+												<div class="drawer">
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</div>
+										</div>
+										<div></div>
+										<div></div>
+									</div>
+									<div class="tower">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+									<div class="desk">
+										<div>
+											<div class="table-pod"></div>
+											<div class="table-pod"></div>
+											<div class="table-pod"></div>
+											<div class="computer">
+												<div class="screen-foot">
+													<div class="screen-pod">
+														<div>
+															<div class="screen">
+																<div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+																<div></div>
+															</div>
+														</div>
+														<div></div>
+														<div></div>
+														<div></div>
+														<div></div>
+														<div></div>
+													</div>
+												</div>
+												<div class="keyboard"></div>
+												<div class="mouse">|</div>
+											</div>
+										</div>
+										<div>
+											<div class="table-pod"></div>
+											<div class="lamp"></div>
+										</div>
+									</div>
+									<div class="chair">
+										<div class="pod">
+											<div class="seat">
+												<div class="pod">
+													<div>
+														<div class="backrest"></div>
+													</div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+													<div></div>
+												</div>
+											</div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+										</div>
+										<div class="foot"></div>
+										<div class="foot"></div>
+										<div class="foot"></div>
+										<div class="foot"></div>
+										<div class="foot"></div>
+									</div>
+								</div>
+								<div class="character">
+									<div class="head"></div>
+									<div class="arm"></div>
+									<div class="arm"></div>
+									<div class="leg"></div>
+									<div class="leg"></div>
+								</div>
+							</div>
+							<div class="wall">
+								<div id="inception" class="ratio16-9">
+									<div class="isometric-container">
+										<div class="isometric">
+											<div class="cube">
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wall">
+								<h1>IsometricSass</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="prototype">
+				Press F5 to launch the animation
+			</p>
+			<h3 id="projects"><a href="#projects" title="anchor">Your projects</a></h3>
+			<ul class="list-triangle">
+				<li>tactiCube - <a href="https://github.com/yip-theodore/tactiCube">[Source]</a> <a href="https://yip-theodore.github.io/tactiCube/">[Demo]</a></li>
+			</ul>
+
+			<footer class="lead text-right">
+				Created by <a href="https://morgancaron.dev/">Morgan Caron</a>.
+			</footer>
+		</div>
+	</body>
+</html>
