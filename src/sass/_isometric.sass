@@ -38,9 +38,9 @@
     &::after
         +allSpace
 
-=grid($size, $color)
+=grid($size, $lineweight, $color)
     position: absolute
-    background-image: linear-gradient($color 1%, transparent 1%, transparent 99%, $color 99%), linear-gradient(90deg, $color 1%, transparent 1%, transparent 99%, $color 99%)
+    background-image: linear-gradient($color $lineweight, transparent $lineweight, transparent 100% - $lineweight, $color 100% - $lineweight), linear-gradient(90deg, $color $lineweight, transparent $lineweight, transparent 100% - $lineweight, $color 100% - $lineweight)
     background-size: $size $size
 
 =plane($width, $height, $color)
