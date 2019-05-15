@@ -40,7 +40,7 @@
 		"prism-themes": "^1.1.0",
 		"prismjs": "^1.16.0",
 		"sass-loader": "^7.1.0",
-		"ts-loader": "^5.4.5",
+		"ts-loader": "^6.0.0",
 		"typescript": "^3.4.5",
 		"uglifyjs-webpack-plugin": "^2.1.2",
 		"webpack": "^4.30.0",
