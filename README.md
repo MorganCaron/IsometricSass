@@ -5,7 +5,6 @@
 *Sass library of isometric functions*
 
 ![Travis CI](https://img.shields.io/travis/com/MorganCaron/IsometricSass.svg?style=flat-square)
-[![Greenkeeper badge](https://badges.greenkeeper.io/MorganCaron/IsometricSass.svg?style=flat-square)](https://greenkeeper.io/)
 ![GitHub](https://img.shields.io/github/license/MorganCaron/IsometricSass.svg?style=flat-square)
 
 ## Documentation
