@@ -27,7 +27,7 @@
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/prismjs": "^1.16.0",
 		"autoprefixer": "^9.5.1",
-		"babel-loader": "^8.0.5",
+		"babel-loader": "^8.0.6",
 		"babel-plugin-prismjs": "^1.0.2",
 		"clean-webpack-plugin": "^2.0.1",
 		"css-loader": "^2.1.1",
