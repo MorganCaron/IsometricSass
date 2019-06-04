@@ -26,7 +26,7 @@
 		"@babel/preset-env": "^7.4.5",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/prismjs": "^1.16.0",
-		"autoprefixer": "^9.5.1",
+		"autoprefixer": "^9.6.0",
 		"babel-loader": "^8.0.6",
 		"babel-plugin-prismjs": "^1.0.2",
 		"clean-webpack-plugin": "^3.0.0",
