@@ -25,7 +25,7 @@ For full demo & documentation, visit [https://morgancaron.github.io/IsometricSas
 
 The use of 3D graphic contexts in JavaScript is often to the detriment of the performance and support of some browsers.
 
-IsometricSass is a SASS framework that requires no JavaScript.
+IsometricSass is a Sass framework that requires no JavaScript.
 It was created to be able to fully use the CSS 3D transformations to create 3D scenes.
 
 ## Who?
@@ -41,7 +41,7 @@ Just paste this in your style.sass file:
 @import isometric
 ```
 
-You can create your own 3D objects by using or extending the SASS classes in the `_isometric.sass` file.
+You can create your own 3D objects by using or extending the Sass classes in the `_isometric.sass` file.
 
 ## Contributing
 
