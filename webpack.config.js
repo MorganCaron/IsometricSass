@@ -76,7 +76,7 @@ module.exports = function(env, argv) {
 		},
 		resolve: {
 			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-			extensions: ['.ts', '.tsx', '.js', '.json', '.css', '.sass', '.scss', '.png', '.svg', '.jpg', '.gif']
+			extensions: ['.css', '.sass', '.scss', '.js', '.jsx', '.ts', '.tsx', '.json', '.png', '.svg', '.jpg', '.jpeg', '.gif', '.txt']
 		},
 		module: {
 			rules: [
@@ -89,16 +89,20 @@ module.exports = function(env, argv) {
 					use: [...cssLoaders, sassLoader]
 				},
 				{
-					test: /\.js$/,
+					test: /\.jsx?$/,
 					use: jsLoader
 				},
 				{
-					test: /\.ts?$/,
+					test: /\.tsx?$/,
 					use: [jsLoader, 'ts-loader']
 				},
 				{
 					test: /\.(png|svg|jpe?g|gif)$/,
 					use: fileLoader
+				},
+				{
+					test: /\.txt$/,
+					use: 'raw-loader'
 				}
 			]
 		},
