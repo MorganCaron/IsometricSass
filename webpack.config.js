@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssnanoPlugin = require('@intervolga/optimize-cssnano-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const path = require('path')
 
 module.exports = function(env, argv) {
 	const dev = (argv.mode === 'development')
@@ -29,7 +30,7 @@ module.exports = function(env, argv) {
 			options: {
 				plugins: (loader) => [
 					require('autoprefixer')({
-						browsers: ['last 2 versions']
+						overrideBrowserslist: ['last 2 versions']
 					})
 				],
 				sourceMap: sourceMap
@@ -74,6 +75,7 @@ module.exports = function(env, argv) {
 			contentBase: './dist'
 		},
 		resolve: {
+			modules: [path.resolve(__dirname, 'src'), 'node_modules'],
 			extensions: ['.ts', '.tsx', '.js', '.json', '.css', '.sass', '.scss', '.png', '.svg', '.jpg', '.gif']
 		},
 		module: {
