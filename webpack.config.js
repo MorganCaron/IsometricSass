@@ -81,27 +81,27 @@ module.exports = function(env, argv) {
 		module: {
 			rules: [
 				{
-					test: /\.css$/,
+					test: /\.css$/i,
 					use: cssLoaders
 				},
 				{
-					test: /\.s(a|c)ss$/,
+					test: /\.s(a|c)ss$/i,
 					use: [...cssLoaders, sassLoader]
 				},
 				{
-					test: /\.jsx?$/,
+					test: /\.jsx?$/i,
 					use: jsLoader
 				},
 				{
-					test: /\.tsx?$/,
+					test: /\.tsx?$/i,
 					use: [jsLoader, 'ts-loader']
 				},
 				{
-					test: /\.(png|svg|jpe?g|gif)$/,
+					test: /\.(png|svg|jpe?g|gif)$/i,
 					use: fileLoader
 				},
 				{
-					test: /\.txt$/,
+					test: /\.txt$/i,
 					use: 'raw-loader'
 				}
 			]
