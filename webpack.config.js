@@ -20,9 +20,9 @@ module.exports = function(env, argv) {
 		{
 			loader: 'css-loader',
 			options: {
-				importLoaders: 1,
-				camelCase: true,
-				sourceMap: sourceMap
+				modules: true,
+				sourceMap: sourceMap,
+				importLoaders: 2
 			}
 		},
 		{
