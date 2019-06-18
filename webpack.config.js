@@ -9,7 +9,6 @@ module.exports = function(env, argv) {
 	const dev = (argv.mode === 'development')
 	const prod = !dev
 	const minimize = prod
-	const sourceMap = dev
 	const cssLoaders = [
 		{
 			loader: MiniCssExtractPlugin.loader,
@@ -17,14 +16,7 @@ module.exports = function(env, argv) {
 				hmr: dev,
 			},
 		},
-		{
-			loader: 'css-loader',
-			options: {
-				importLoaders: 1,
-				camelCase: true,
-				sourceMap: sourceMap
-			}
-		},
+		'css-loader',
 		{
 			loader: 'postcss-loader',
 			options: {
@@ -32,17 +24,10 @@ module.exports = function(env, argv) {
 					require('autoprefixer')({
 						overrideBrowserslist: ['last 2 versions']
 					})
-				],
-				sourceMap: sourceMap
+				]
 			}
 		}
 	]
-	const sassLoader = {
-		loader: 'sass-loader',
-		options: {
-			sourceMap: sourceMap
-		}
-	}
 	const jsLoader = {
 		loader: 'babel-loader',
 		options: {
@@ -65,12 +50,8 @@ module.exports = function(env, argv) {
 		output: {
 			path: __dirname + '/dist',
 			filename: (dev ? '[name].min.js' : '[name].[contenthash].min.js'),
-			sourceMapFilename: (dev ? '[name].js.map' : '[name].[contenthash].js.map'),
-			hotUpdateChunkFilename: 'hot/hot-update.js',
-			hotUpdateMainFilename: 'hot/hot-update.json'
 		},
 		watch: dev,
-		devtool: 'inline-source-map',
 		devServer: {
 			contentBase: './dist'
 		},
@@ -86,7 +67,7 @@ module.exports = function(env, argv) {
 				},
 				{
 					test: /\.s(a|c)ss$/i,
-					use: [...cssLoaders, sassLoader]
+					use: [...cssLoaders, 'sass-loader']
 				},
 				{
 					test: /\.jsx?$/i,
@@ -131,7 +112,6 @@ module.exports = function(env, argv) {
 			}),
 			new UglifyJsPlugin({
 				test: /\.js($|\?)/i,
-				sourceMap: sourceMap,
 				cache: true,
 				parallel: true
 			})
