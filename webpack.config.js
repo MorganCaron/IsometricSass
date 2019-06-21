@@ -21,8 +21,8 @@ module.exports = (env, argv) => {
 		{
 			loader: MiniCssExtractPlugin.loader,
 			options: {
-				hmr: dev,
-			},
+				hmr: dev
+			}
 		},
 		'css-loader',
 		{
