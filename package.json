@@ -21,7 +21,7 @@
 	"author": "Morgan Caron",
 	"license": "ISC",
 	"devDependencies": {
-		"@babel/core": "^7.4.5",
+		"@babel/core": "^7.5.4",
 		"@babel/preset-env": "^7.4.5",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/prismjs": "^1.16.0",
