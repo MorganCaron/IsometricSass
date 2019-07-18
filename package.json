@@ -22,7 +22,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.4.5",
-		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-env": "^7.5.5",
 		"@intervolga/optimize-cssnano-plugin": "^1.0.6",
 		"@types/prismjs": "^1.16.0",
 		"autoprefixer": "^9.6.0",
