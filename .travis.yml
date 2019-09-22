@@ -7,6 +7,7 @@ script: npm run build
 
 before_deploy:
   - sed -i '/dist/d' .gitignore
+  - sed -i '/index.html/d' .gitignore
 
 deploy:
   provider: pages
