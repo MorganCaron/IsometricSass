@@ -1,7 +1,7 @@
 {
 	"name": "isometricsass",
 	"version": "1.0.0",
-	"description": "Isomatric Sass Library",
+	"description": "Isometric Sass Library",
 	"main": "src/sass/_isometric.sass",
 	"scripts": {
 		"watch": "webpack-dev-server --mode development --open",
@@ -26,7 +26,7 @@
 		"nootstrap": "git+https://github.com/MorganCaron/Nootstrap.git",
 		"prism-themes": "^1.1.0",
 		"prismjs": "^1.17.1",
-		"webpack-config-generator": "git+https://github.com/MorganCaron/webpack-config-generator.git"
+		"webpack-config-generator": "^1.0.3"
 	},
 	"repository": {
 		"type": "git",

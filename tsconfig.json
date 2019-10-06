@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"baseUrl": "src",
-		"outDir": "dist",
+		"outDir": "build",
 		"noImplicitAny": true,
 		"removeComments": true,
 		"module": "es6",
