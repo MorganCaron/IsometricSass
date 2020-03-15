@@ -1,58 +1,32 @@
 # IsometricSass
-
 [![IsometricSass](screenshot.png)](https://morgancaron.github.io/IsometricSass/)
 
-*Sass library of isometric functions*
+## *Sass library of isometric functions*
+The use of 3D graphic contexts in JavaScript is often to the detriment of the performance and support of some browsers.
 
-![Travis CI](https://img.shields.io/travis/com/MorganCaron/IsometricSass.svg?style=flat-square)
-![GitHub](https://img.shields.io/github/license/MorganCaron/IsometricSass.svg?style=flat-square)
+IsometricSass is a Sass framework that requires **no JavaScript**.
+It was created to be able to fully use the CSS 3D transformations to create 3D scenes.
+
+![Github Stars](https://img.shields.io/github/stars/MorganCaron/IsometricSass?style=for-the-badge)
+![Github Forks](https://img.shields.io/github/forks/MorganCaron/IsometricSass?style=for-the-badge)
+[![Discord](https://img.shields.io/discord/268838260153909249?label=Chat&logo=Discord&style=for-the-badge)](https://discord.gg/mxZvun4)
+
+### Project Health
+[![Codacy](https://img.shields.io/codacy/grade/eaca93f8b27b4e8ca90555d467051888?logo=Codacy&style=for-the-badge)](https://www.codacy.com/manual/MorganCaron/IsometricSass)
+[![Github Actions](https://img.shields.io/github/workflow/status/MorganCaron/IsometricSass/NodeJS%20Deployment?logo=Github&style=for-the-badge)](https://github.com/MorganCaron/IsometricSass/actions?query=workflow%3A%22NodeJS+Deployment%22)
+
+---
+
+## Getting Started
+[![Install](https://img.shields.io/badge/-Install-blue?style=for-the-badge)](INSTALL.md)
+[![Contribute](https://img.shields.io/badge/-Contribute-blue?style=for-the-badge)](CONTRIBUTING.md)
 
 ## Documentation
 
 For full demo & documentation, visit [https://morgancaron.github.io/IsometricSass/](https://morgancaron.github.io/IsometricSass/)
 
-## Goals
+---
 
-- Responsive
-- Good code quality
-- Good browser support
-- Good performances
-- Beautiful
-- Easy to use
-- No JavaScript
-
-## Why?
-
-The use of 3D graphic contexts in JavaScript is often to the detriment of the performance and support of some browsers.
-
-IsometricSass is a Sass framework that requires no JavaScript.
-It was created to be able to fully use the CSS 3D transformations to create 3D scenes.
-
-## Who?
-
-You may want to use IsometricSass if you want to display some 3D animations to illustrate your site without losing performance.
-
-You probably don't want to use it to display hundreds of 3D elements like in some browser games. It's just not made for this kind of content.
-
-## How?
-
-Just paste this in your style.sass file:
-```sass
-@import isometric
-```
-
-You can create your own 3D objects by using or extending the Sass classes in the `_isometric.sass` file.
-
-## Contributing
-
-IsometricSass becomes better for everyone when people like you help make it better!
-
-Have any questions or concerns? Did I forget an element or selector? Does something look ugly? Feel free to submit an issue or pull request.
-
-If you decide to contribute, after downloading a copy of the repository make sure to `npm install` to install dependencies useful for development. Then, you can just run the following to start a server of the demo with live reloading and automatic Sass compiling.
-
-```
-$ npm run dev
-```
-
-Thanks for taking the time to contribute :)
+## Additional Informations
+![Top Language](https://img.shields.io/github/languages/top/MorganCaron/IsometricSass?style=for-the-badge)
+[![License](https://img.shields.io/github/license/MorganCaron/IsometricSass?style=for-the-badge)](https://github.com/MorganCaron/IsometricSass/blob/master/LICENSE)
