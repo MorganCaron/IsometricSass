@@ -1,17 +1,7 @@
 {
+	"extends": "webpack-config-generator/tsconfig",
 	"compilerOptions": {
 		"baseUrl": "src",
-		"outDir": "build",
-		"noImplicitAny": true,
-		"removeComments": true,
-		"module": "es6",
-		"moduleResolution": "node",
-		"target": "es5",
-		"jsx": "react",
-		"lib": [
-			"dom",
-			"esnext"
-		],
-		"declaration": true
+		"outDir": "build"
 	}
 }
