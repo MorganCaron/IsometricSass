@@ -21,12 +21,12 @@
 	"author": "Morgan Caron",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/prismjs": "latest",
-		"babel-plugin-prismjs": "latest",
+		"@types/prismjs": "^1.16.1",
+		"babel-plugin-prismjs": "^2.0.1",
 		"nootstrap": "git+https://github.com/MorganCaron/Nootstrap.git",
-		"prism-themes": "latest",
-		"prismjs": "latest",
-		"webpack-config-generator": "latest"
+		"prism-themes": "^1.4.0",
+		"prismjs": "^1.20.0",
+		"webpack-config-generator": "^1.0.13"
 	},
 	"repository": {
 		"type": "git",
