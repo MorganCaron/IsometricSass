@@ -4,8 +4,8 @@
 	"description": "Isometric Sass Library",
 	"main": "src/sass/_isometric.sass",
 	"scripts": {
-		"watch": "webpack-dev-server --mode development --open",
-		"dev": "webpack-dev-server --mode development --open",
+		"watch": "webpack serve --mode development",
+		"dev": "webpack serve --mode development",
 		"build": "webpack --mode production",
 		"prod": "webpack --mode production"
 	},
@@ -25,8 +25,8 @@
 		"babel-plugin-prismjs": "^2.0.1",
 		"nootstrap": "git+https://github.com/MorganCaron/Nootstrap.git",
 		"prism-themes": "^1.4.0",
-		"prismjs": "^1.20.0",
-		"webpack-config-generator": "^1.0.13"
+		"prismjs": "^1.23.0",
+		"webpack-config-generator": "^1.0.15"
 	},
 	"repository": {
 		"type": "git",
