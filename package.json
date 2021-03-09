@@ -1,6 +1,6 @@
 {
 	"name": "isometricsass",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Isometric Sass Library",
 	"main": "src/sass/_isometric.sass",
 	"scripts": {
