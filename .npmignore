@@ -1,1 +1,5 @@
+/.github
+/build
+node_modules/
 /src/docs
+/webpack.config.js
