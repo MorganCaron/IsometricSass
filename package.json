@@ -24,7 +24,7 @@
 		"nootstrap-ui": "^1.0.4",
 		"prism-themes": "^1.7.0",
 		"prismjs": "^1.23.0",
-		"webpack-config-generator": "^1.0.22"
+		"webpack-config-generator": "^1.0.23"
 	},
 	"repository": {
 		"type": "git",
