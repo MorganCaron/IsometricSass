@@ -3,10 +3,6 @@
 	"version": "1.0.7",
 	"description": "Isometric Sass Library",
 	"main": "src/sass/_isometric.sass",
-	"scripts": {
-		"dev": "webpack serve --open --mode development",
-		"build": "webpack --mode production"
-	},
 	"keywords": [
 		"sass",
 		"css",
@@ -18,14 +14,6 @@
 	],
 	"author": "Morgan Caron",
 	"license": "ISC",
-	"devDependencies": {
-		"@types/prismjs": "^1.16.5",
-		"babel-plugin-prismjs": "^2.0.1",
-		"nootstrap-ui": "^1.0.5",
-		"prism-themes": "^1.7.0",
-		"prismjs": "^1.23.0",
-		"webpack-config-generator": "^1.2.1"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/MorganCaron/IsometricSass.git"

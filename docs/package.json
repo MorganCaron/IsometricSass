@@ -1,0 +1,29 @@
+{
+	"name": "docs",
+	"version": "1.0.0",
+	"description": "Documentation of IsometricSass",
+	"scripts": {
+		"dev": "webpack serve --open --mode development",
+		"build": "webpack --mode production"
+	},
+	"keywords": [],
+	"author": "Morgan Caron",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/prismjs": "^1.16.5",
+		"babel-plugin-prismjs": "^2.0.1",
+		"isometricsass": "^1.0.7",
+		"nootstrap-ui": "^1.0.5",
+		"prism-themes": "^1.7.0",
+		"prismjs": "^1.23.0",
+		"webpack-config-generator": "^1.2.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MorganCaron/IsometricSass.git"
+	},
+	"bugs": {
+		"url": "https://github.com/MorganCaron/IsometricSass/issues"
+	},
+	"homepage": "https://github.com/MorganCaron/IsometricSass#readme"
+}

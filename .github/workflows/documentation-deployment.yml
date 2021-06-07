@@ -1,8 +1,8 @@
-name: NodeJS Deployment
+name: Documentation deployment
 
 on:
   push:
-    branches:    
+    branches:
       - master
 
 jobs:
@@ -11,13 +11,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install dependencies & Build
+    - name: Build Documentation
       run: |
+        cd docs/
         npm install
-        npm run build --if-present
+        npm run build
     - name: Deploy on GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.3
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         branch: gh-pages
-        folder: build
+        folder: docs/build/

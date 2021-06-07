@@ -13,7 +13,7 @@ It was created to be able to fully use the CSS 3D transformations to create 3D s
 
 ### Project Health
 [![Codacy](https://img.shields.io/codacy/grade/eaca93f8b27b4e8ca90555d467051888?logo=Codacy&style=for-the-badge)](https://www.codacy.com/manual/MorganCaron/IsometricSass)
-[![Github Actions](https://img.shields.io/github/workflow/status/MorganCaron/IsometricSass/NodeJS%20Deployment?logo=Github&style=for-the-badge)](https://github.com/MorganCaron/IsometricSass/actions?query=workflow%3A%22NodeJS+Deployment%22)
+[![Github Actions](https://img.shields.io/github/workflow/status/MorganCaron/IsometricSass/Documentation%20deployment?logo=Github&style=for-the-badge)](https://github.com/MorganCaron/IsometricSass/actions?query=workflow%3A%22Documentation+deployment%22)
 
 ---
 
