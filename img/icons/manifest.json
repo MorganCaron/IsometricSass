@@ -1,7 +1,7 @@
 {
-  "name": "isometricsass",
-  "short_name": "isometricsass",
-  "description": "Isometric Sass Library",
+  "name": "docs",
+  "short_name": "docs",
+  "description": "Documentation of IsometricSass",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

@@ -1,7 +1,7 @@
 {
-  "version": "1.0.7",
-  "name": "isometricsass",
-  "description": "Isometric Sass Library",
+  "version": "1.0.0",
+  "name": "docs",
+  "description": "Documentation of IsometricSass",
   "icons": {
     "60": "firefox_app_60x60.png",
     "128": "firefox_app_128x128.png",
