@@ -15,7 +15,7 @@
 		"isometricsass": "^1.0.7",
 		"nootstrap-ui": "^1.0.5",
 		"prism-themes": "^1.7.0",
-		"prismjs": "^1.23.0",
+		"prismjs": "^1.24.0",
 		"webpack-config-generator": "^1.3.0"
 	},
 	"repository": {
